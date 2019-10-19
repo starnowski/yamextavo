@@ -1,0 +1,13 @@
+#
+# https://docs.travis-ci.com/user/languages/python/ - Building a Python Project in Travis CI
+#
+name: "yamale tests"
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - pytest validators/tests

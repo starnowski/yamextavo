@@ -25,3 +25,6 @@ If yes then behaviour is same as the 'any' validator.
 * all_ref - [0.2] Checks if all of passed references validators 'str_ref' or 'numb_ref' returns true. If yes then behaviour is same as the 'any' validator.
 
     [0.3] Validation should be done based on all validators which were defined for all reference validators.
+    
+### Useful links:
+*  [Yamale](https://github.com/23andMe/Yamale)

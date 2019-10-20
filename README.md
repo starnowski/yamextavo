@@ -10,7 +10,8 @@ If yes then behaviour is same as the 'any' validator.
 ### TODO
 
 * str_ref - [0.1] String reference validator, contains 'min' and 'max' constraints and also 'regexp' constraint
-* num_ref - [0.1] Number reference validator, contains 'min' and 'max' constraints
+* int_ref - [0.1] Integer reference validator, contains 'min' (<=) and 'max' (>=) constraints
+* num_ref - [0.1] Number reference validator, contains 'min' (<=) and 'max' (>=) constraints
 
 * any_ref - [0.2] Checks if any of passed references validators 'str_ref' or 'num_ref' returns true. If yes then behaviour is same as the 'any' validator.
 

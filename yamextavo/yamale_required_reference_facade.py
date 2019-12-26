@@ -4,7 +4,7 @@ import itertools
 import yamale
 
 from yamextavo.utils import YamlFileHelper
-from yamextavo.validators.required_reference_validator import RequiredReferenceValidator
+from yamextavo.validators import RequiredReferenceValidator
 
 
 class YamaleRequiredReferenceFacade():

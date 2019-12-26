@@ -2,7 +2,6 @@ import unittest
 import os
 from os import path
 import yaml
-
 from yamextavo import YamaleRequiredReferenceFacade
 
 

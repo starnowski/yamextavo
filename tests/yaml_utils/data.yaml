@@ -1,0 +1,11 @@
+project:
+  name: XXX
+  language: python
+owner:
+  name: Szymon
+members:
+  - Szymon Tarnowski
+  - John Doe
+developer.country:  Poland
+organization: Community
+emptynode:

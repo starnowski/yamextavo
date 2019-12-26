@@ -3,7 +3,7 @@ import os
 from os import path
 import yaml
 
-from yamextavo.validators import YamaleRequiredReferenceFacade
+from yamextavo.validators.required_reference_validator import YamaleRequiredReferenceFacade
 
 
 class TestRequiredReferenceValidator(unittest.TestCase):

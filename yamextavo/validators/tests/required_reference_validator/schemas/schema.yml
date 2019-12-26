@@ -1,2 +1,0 @@
-passenger_name: ref_req("passenger_infant_name", str(min=1))
-passenger_infant_name:  str(required=False)

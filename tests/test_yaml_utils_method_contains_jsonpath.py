@@ -1,6 +1,6 @@
 import unittest
 from yaml import load
-from yamextavo.validators import YamlFileHelper
+from yamextavo import YamlFileHelper
 import os
 from os import path
 

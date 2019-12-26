@@ -1,6 +1,5 @@
 import threading
 from yamale import validators
-from yamale.validators import Validator, Any
 import itertools
 import yamale
 

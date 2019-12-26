@@ -2,11 +2,8 @@ import unittest
 import os
 from os import path
 import yaml
-import itertools
-import yamale
-from yamale import validators
 
-from validators.src.required_reference_validator import RequiredReferenceValidator, YamaleRequiredReferenceFacade
+from yamextavo.validators.required_reference_validator import YamaleRequiredReferenceFacade
 
 
 class TestRequiredReferenceValidator(unittest.TestCase):

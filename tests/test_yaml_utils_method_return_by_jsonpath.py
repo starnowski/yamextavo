@@ -34,3 +34,6 @@ class TestYamlFileHelper(unittest.TestCase):
 
         # then
         self.assertIsNone(result, "YamlFileHelper object should return None value for node \"company\"!")
+
+if __name__ == '__main__':
+    unittest.main()

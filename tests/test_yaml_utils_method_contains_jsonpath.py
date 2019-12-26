@@ -1,6 +1,6 @@
 import unittest
 from yaml import load
-from yamextavo import YamlFileHelper
+from yamextavo.yaml_utils import YamlFileHelper
 import os
 from os import path
 
@@ -97,4 +97,7 @@ class TestYamlFileHelper(unittest.TestCase):
         # then
         self.assertFalse(result, "YamlFileHelper object should return false for non existed \"developer.name\" node!")
 
+
     # TODO array value
+if __name__ == '__main__':
+    unittest.main()

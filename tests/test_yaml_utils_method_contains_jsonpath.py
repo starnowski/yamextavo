@@ -1,5 +1,5 @@
 import unittest
-from yaml import load
+from yaml import full_load
 from yamextavo.utils import YamlFileHelper
 import os
 from os import path
@@ -13,7 +13,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_true_for_existed_main_root_node(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertTrue("organization" in yaml_data, "Yaml should contains property \"organization\"")
 
         # when
@@ -25,7 +25,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_false_for_non_existed_main_root_node(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertFalse("company" in yaml_data, "Yaml should not contains property \"organization\"")
 
         # when
@@ -37,7 +37,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_true_for_existed_child_node(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertTrue("owner" in yaml_data, "Yaml should contains property \"owner\"")
             self.assertTrue("name" in yaml_data.get("owner"), "Yaml should contains property \"owner.name\"")
 
@@ -50,7 +50,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_false_for_non_existed_child_node(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertTrue("owner" in yaml_data, "Yaml should contains property \"owner\"")
             self.assertTrue("age" not in yaml_data.get("owner"), "Yaml should not contains property \"owner.age\"")
 
@@ -63,7 +63,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_true_for_existed_main_empty_root_node(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertTrue("emptynode" in yaml_data, "Yaml should contains property \"emptynode\"")
             self.assertTrue(yaml_data.get("emptynode") is None, "Node \"emptynode\" should have null value")
 
@@ -76,7 +76,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_true_for_existed_main_root_node_which_contains_comma(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertTrue("developer.country" in yaml_data, "Yaml should contains property \"developer.country\"")
 
         # when
@@ -88,7 +88,7 @@ class TestYamlFileHelper(unittest.TestCase):
     def test_should_return_false_for_non_existed_main_root_node_which_contains_comma(self):
         # given
         with open(self.test_file, "r") as f:
-            yaml_data = load(f)
+            yaml_data = full_load(f)
             self.assertFalse("developer.name" in yaml_data, "Yaml should contains property \"developer.name\"")
 
         # when

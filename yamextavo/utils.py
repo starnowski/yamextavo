@@ -6,7 +6,7 @@ class YamlFileHelper:
 
     def __init__(self, filepath):
         with open(filepath, "r") as f:
-            yaml_file = yaml.load(f)
+            yaml_file = yaml.full_load(f)
             self.json_data=yaml_file
         pass
 

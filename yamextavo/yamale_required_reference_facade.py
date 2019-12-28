@@ -19,3 +19,4 @@ class YamaleRequiredReferenceFacade():
         yamale_data = itertools.chain(*map(yamale.make_data, [data_file_path]))
         threading.current_thread().__setattr__("yaml_data_store", YamlFileHelper(data_file_path))
         return yamale.validate(self.yamale_schema, yamale_data) is not None
+        #TODO Detach "yaml_data_store" from the current thread

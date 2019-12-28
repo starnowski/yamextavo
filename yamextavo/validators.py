@@ -18,10 +18,10 @@ class RequiredReferenceValidator(Any):
     @property
     def is_optional(self):
         required = False
-        ct = threading.current_thread()
-        if not hasattr(ct, 'yaml_data_store'):
-            pass #TODO return Validation error
-        yaml_data_store = threading.current_thread().__getattribute__("yaml_data_store")
+        ct = threading.current_thread() #TODO Move to extractYamlDataStore method
+        if not hasattr(ct, 'yaml_data_store'):  #TODO Move to extractYamlDataStore method
+            pass #TODO return Validation error  #TODO Move to extractYamlDataStore method
+        yaml_data_store = threading.current_thread().__getattribute__("yaml_data_store")    #TODO Move to extractYamlDataStore method
         if yaml_data_store is not None and  isinstance(yaml_data_store, YamlFileHelper) :
             if yaml_data_store.contains_jsonpath(self.jsonpath):
                 yaml_document = yaml_data_store.return_first_value_by_jsonpath(self.jsonpath)

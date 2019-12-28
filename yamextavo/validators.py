@@ -26,5 +26,5 @@ class RequiredReferenceValidator(Any):
             if yaml_data_store.contains_jsonpath(self.jsonpath):    #TODO Move to retrieveJsonNode method
                 yaml_document = yaml_data_store.return_first_value_by_jsonpath(self.jsonpath)   #TODO Move to retrieveJsonNode method
                 if yaml_document is not None and yaml_document.strip() != "":   #TODO  Move to checkIfPropertyIsRequired method
-                    required = True
+                    required = True #TODO  Move to checkIfPropertyIsRequired method
         return not required

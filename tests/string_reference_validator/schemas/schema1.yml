@@ -1,0 +1,8 @@
+dependent_node1: yamextavo_str_ref("primary_node1", yamextavo_max=50, str(min=5, max=30))
+primary_node1: str(required=False, min=7)
+
+dependent_node2: yamextavo_str_ref("primary_node2", yamextavo_min=4, yamextavo_max=20, str(min=1, max=30))
+primary_node2: str(required=False, min=5)
+
+dependent_node3: yamextavo_str_ref("primary_node3", yamextavo_min=4, str(min=6, max=90))
+primary_node3: str(required=False, min=11)

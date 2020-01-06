@@ -5,7 +5,7 @@ import yaml
 from yamextavo import YamaleRequiredReferenceFacade
 
 
-class TestRequiredReferenceValidator(unittest.TestCase):
+class TestRequiredStringReferenceValidator(unittest.TestCase):
 
     schema_file = path.join(os.path.dirname(__file__), "string_reference_validator/schemas/1/schema.yml")
 

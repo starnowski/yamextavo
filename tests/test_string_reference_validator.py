@@ -12,7 +12,7 @@ class TestRequiredReferenceValidator(unittest.TestCase):
     def test_should_return_validation_error_for_invalid_schema_where_child_element_has_invalid_content_and_primary_node_not_exists(self):
         # given
         tested = YamaleRequiredReferenceFacade(self.schema_file)
-        test_file = path.join(os.path.dirname(__file__), "string_reference_validator/schemas/1/invalid_content_validation_message/nonexistent_parent_invalid_child.yaml")
+        test_file = path.join(os.path.dirname(__file__), "string_reference_validator/schemas/1/invalid_content_validation_message/nonexistent_parent_invalid_child.yml")
         with open(test_file, "r") as f:
             yaml_data = yaml.full_load(f)
             self.assertTrue("dependent_node2" in yaml_data, "Yaml should contains property \"dependent_node2\"")

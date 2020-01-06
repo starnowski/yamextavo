@@ -1,0 +1,3 @@
+# The parent node is empty which is fine, but the child node has invalid value because min string length is 4 characters
+dependent_node2:  xxx
+primary_node2:

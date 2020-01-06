@@ -83,5 +83,23 @@ class TestRequiredReferenceValidator(unittest.TestCase):
         # then
         self.assertTrue(result, "Validator should return true")
 
+    def test_should_return_true_for_valid_document_where_primany_and_child_node_exists_and_has_valid_content(self):
+        # given
+        tested = YamaleRequiredReferenceFacade(self.schema_file)
+        test_file = path.join(os.path.dirname(__file__), "string_reference_validator/schemas/1/valid/filled_fields.yml")
+        with open(test_file, "r") as f:
+            yaml_data = yaml.full_load(f)
+            self.assertTrue("dependent_node2" in yaml_data, "Yaml should not contains property \"dependent_node2\"")
+            self.assertEqual("child", yaml_data.get("dependent_node2"), "The element \"dependent_node2\" should have value \"xxx\"")
+            self.assertTrue("primary_node2" in yaml_data, "Yaml should contains property \"primary_node2\"")
+            self.assertEqual("parent", yaml_data.get("primary_node2"), "The element \"primary_node2\" should have value \"parent\"")
+
+        # when
+        result = tested.validate(test_file)
+
+        # then
+        self.assertTrue(result, "Validator should return true")
+
+
 if __name__ == '__main__':
     unittest.main()
